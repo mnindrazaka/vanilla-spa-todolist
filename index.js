@@ -17,8 +17,8 @@ function setState(newState) {
 }
 
 function onStateChange(prevState, nextState) {
-  if (prevState.path !== nextState.path) {
-    history.pushState(null, "", nextState.path);
+  if (prevState.hash !== nextState.hash) {
+    history.pushState(null, "", nextState.hash);
   } else if (prevState.inputValue !== nextState.inputValue) {
     localStorage.setItem("inputValue", nextState.inputValue);
   } else if (prevState.todos !== nextState.todos) {
